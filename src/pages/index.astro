@@ -1,0 +1,102 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Badge from "../components/Badge.astro"
+import SectionContainer from "../components/SectionContainer.astro"
+import LinkedInIcon from "../components/icons/LinkedIn.astro"
+import SocialPill from "../components/SocialPill.astro"
+import GitHubIcon from "../components/icons/GitHub.astro"
+import MailIcon from "../components/icons/Mail.astro"
+import Experience from "../components/Experience.astro"
+import Briefcase from "../components/icons/Briefcase.astro"
+import CodeIcon from "../components/icons/Code.astro"
+import Projects from "../components/Projects.astro"
+import Profile from "../components/icons/Profile.astro"
+import Contacto from "../components/Contact.tsx"
+import Contact from "../components/icons/Contact.astro"
+import AboutMe from "../components/AboutMe.astro"
+
+---
+
+<Layout
+  title="Porfolio de Nicholas - Desarrollador y Programador Web con 15 años de experiencia"
+  description="Contrata a Nicholas para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <img
+        class="rounded-full size-16 mb-4"
+        src="/foto-nicholas.png"
+        alt="nicholas photo"
+      />
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy Nicholas Ceballos <a
+          href="https://linkedin.com/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-balance max-w-[700px]">
+        <span>+3 años de experiencia.</span><span class="text-yellow-200">
+          Desarrollador Web y QA Tester.</span
+        >
+        <span class="text-red-200"> Monterrey, Nuevo Leon</span>.
+        <span class="text-sky-200"
+          >Especializado en crear soluciones únicas.</span
+        >
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://linkedin.com/in/nicholas-josue-ceballos-lopez-88809512a/">
+          <LinkedInIcon class="size-4 md:size-6" />
+           LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/JosueDev-afk">
+          <GitHubIcon class="size-4 md:size-6" />
+           GitHub
+        </SocialPill>
+        <SocialPill href="mailto:josue_ceballos12@hotmail.com">
+          <MailIcon class="size-4 md:size-6" />
+           josue_ceballos12@hotmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+         Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+         Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobremi">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Profile class="size-7" />
+         Sobre mi
+      </h2>
+      <AboutMe/>
+
+    </SectionContainer>
+
+    <SectionContainer id="contacto">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Contact class="size-7" />
+         Contacto
+      </h2>
+      <Contacto/>
+    </SectionContainer>
+  </main>
+</Layout>
